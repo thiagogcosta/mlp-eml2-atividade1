@@ -1,7 +1,6 @@
 import sys
 import os
 import pytest
-from unittest.mock import patch
 
 # Adiciona o diretório pai ao sys.path para encontrar o módulo 'app'
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
