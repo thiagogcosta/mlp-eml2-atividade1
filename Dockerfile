@@ -2,7 +2,7 @@
 # Atenção a imagem base deve ser a mesma da que vc versionou o modelo
 FROM python:3.11.4
 
-WORKDIR /app
+WORKDIR /mlp-eml2-atividade1
 
 COPY requirements.txt .
 
@@ -12,7 +12,7 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["python3", "app.py"]
+CMD ["python3", "app/main.py"]
 
 #----------INSTRUCTIONS----------
 
@@ -20,7 +20,10 @@ CMD ["python3", "app.py"]
 #docker build -t api_deteccao_fraude .
 
 # executar o container com os containers visualizando a rede da maquina
-#docker run -d --name api_deteccao_fraude --network host captcha_crawler 
+#--run in background--
+#docker run -d --name api_deteccao_fraude --network host api_deteccao_fraude
+#--run--
+#docker run --name api_deteccao_fraude --network host api_deteccao_fraude 
 
 # acessar o container
 #docker exec -i -t api_deteccao_fraude bash
